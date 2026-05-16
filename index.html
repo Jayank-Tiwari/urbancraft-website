@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urbancraft | Timeless Interior Experiences</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "brand-dark": "#1a1a1a",
+              "brand-light": "#fdfcfb",
+              "brand-accent": "#cda274", // Muted gold/bronze
+              "brand-gray": "#4a4a4a",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #fdfcfb;
+        color: #1a1a1a;
+      }
+      .hero-overlay {
+        background:
+          linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)),
+          url("WhatsApp%20Image%202026-05-16%20at%2012.04.33%20PM.jpeg")
+            center/cover no-repeat;
+      }
+      .image-hover-zoom {
+        overflow: hidden;
+        display: block; /* Ensures anchor tags behave nicely with hover effects */
+      }
+      .image-hover-zoom img {
+        transition: transform 0.7s ease;
+      }
+      .image-hover-zoom:hover img {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body
+    class="antialiased font-sans selection:bg-brand-accent selection:text-white"
+  >
+    <nav
+      class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div
+            class="flex-shrink-0 flex items-center cursor-pointer"
+            onclick="window.scrollTo(0, 0)"
+          >
+            <span
+              class="font-serif text-3xl font-semibold tracking-wide text-brand-dark"
+              >Urbancraft<span class="text-brand-accent">.</span></span
+            >
+          </div>
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#about"
+              class="text-sm tracking-widest uppercase text-brand-gray hover:text-brand-accent transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="text-sm tracking-widest uppercase text-brand-gray hover:text-brand-accent transition-colors duration-300"
+              >Services</a
+            >
+            <a
+              href="#projects"
+              class="text-sm tracking-widest uppercase text-brand-gray hover:text-brand-accent transition-colors duration-300"
+              >Projects</a
+            >
+            <a
+              href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%20Urbancraft,%20I%20would%20like%20to%20discuss%20an%20interior%20design%20project."
+              target="_blank"
+              class="bg-brand-dark text-white px-6 py-2.5 rounded-sm hover:bg-brand-accent transition-colors duration-300 flex items-center gap-2"
+            >
+              <i class="fab fa-whatsapp text-lg"></i> Let's Talk
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      class="hero-overlay h-screen flex items-center justify-center relative pt-20"
+    >
+      <div
+        class="max-w-4xl mx-auto text-center px-4"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <h1
+          class="text-5xl md:text-7xl font-serif font-semibold text-white leading-tight mb-6"
+        >
+          Transforming Spaces into <br /><span class="italic text-brand-accent"
+            >Timeless Experiences</span
+          >
+        </h1>
+        <p
+          class="text-lg md:text-xl text-gray-200 font-light mb-4 max-w-2xl mx-auto"
+        >
+          At Urbancraft, we design interiors that blend style, comfort, and
+          functionality — turning your vision into reality.
+        </p>
+        <p
+          class="text-md md:text-lg text-gray-300 font-light mb-10 max-w-3xl mx-auto"
+        >
+          We specialize in creating modern, elegant, and personalized interiors
+          for homes and commercial spaces. From concept to execution, every
+          detail is crafted with perfection.
+        </p>
+        <a
+          href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi,%20I'm%20interested%20in%20your%20interior%20design%20services."
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-brand-accent text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-white hover:text-brand-dark transition-all duration-300"
+        >
+          Start Your Project <i class="fab fa-whatsapp text-xl"></i>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="py-24 bg-brand-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div data-aos="fade-right" data-aos-duration="1000">
+            <h2
+              class="text-sm tracking-widest uppercase text-brand-accent mb-3"
+            >
+              The Studio
+            </h2>
+            <h3
+              class="text-4xl md:text-5xl font-serif text-brand-dark mb-6 leading-tight"
+            >
+              Crafting spaces that reflect who you are.
+            </h3>
+            <p class="text-brand-gray mb-6 leading-relaxed font-light text-lg">
+              Urbancraft is an interior design studio dedicated to creating
+              spaces that reflect personality, luxury, and comfort. We believe
+              that every space tells a story, and our goal is to design
+              interiors that are not only visually stunning but also functional
+              and meaningful.
+            </p>
+            <p class="text-brand-gray mb-8 leading-relaxed font-light text-lg">
+              With a passion for creativity and attention to detail, we work
+              closely with our clients to understand their vision and bring it
+              to life with elegance and precision.
+            </p>
+            <blockquote
+              class="border-l-4 border-brand-accent pl-6 italic text-2xl font-serif text-brand-dark"
+            >
+              “Our designs are a perfect blend of aesthetics and practicality.”
+            </blockquote>
+          </div>
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi,%20I%20loved%20the%20designs%20on%20your%20About%20page%20and%20want%20to%20know%20more."
+            target="_blank"
+            class="relative image-hover-zoom cursor-pointer"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.31%20PM.jpeg"
+              alt="Urbancraft Design Showcase"
+              class="w-full h-auto object-cover shadow-2xl rounded-sm"
+            />
+            <div
+              class="absolute -bottom-6 -left-6 bg-white p-8 shadow-xl hidden md:block"
+            >
+              <p class="text-4xl font-serif text-brand-accent mb-1">20+</p>
+              <p class="text-xs uppercase tracking-widest text-brand-gray">
+                Years of Excellence
+              </p>
+            </div>
+            <div
+              class="absolute inset-0 bg-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center rounded-sm"
+            >
+              <span
+                class="bg-white/90 text-brand-dark px-6 py-3 font-serif text-lg shadow-lg"
+                ><i class="fab fa-whatsapp text-green-600 mr-2"></i> Chat with
+                us</span
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-24 bg-gray-50 border-y border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2
+          class="text-sm tracking-widest uppercase text-brand-accent mb-3"
+          data-aos="fade-up"
+        >
+          Our Expertise
+        </h2>
+        <h3
+          class="text-4xl md:text-5xl font-serif text-brand-dark mb-16"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Comprehensive Design Services
+        </h3>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-left"
+        >
+          <div
+            class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-brand-accent mb-4">
+              <i class="fa-solid fa-house text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-serif text-brand-dark mb-2">
+              Residential Interior Design
+            </h4>
+            <p class="text-brand-gray font-light text-sm">
+              Bespoke home interiors tailored to your lifestyle and personal
+              taste.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-brand-accent mb-4">
+              <i class="fa-solid fa-building text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-serif text-brand-dark mb-2">
+              Commercial Interior Design
+            </h4>
+            <p class="text-brand-gray font-light text-sm">
+              Professional workspaces and retail environments built to inspire.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-brand-accent mb-4">
+              <i class="fa-solid fa-compass text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-serif text-brand-dark mb-2">
+              Space Planning
+            </h4>
+            <p class="text-brand-gray font-light text-sm">
+              Optimizing layouts to ensure maximum functionality and flow.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="text-brand-accent mb-4">
+              <i class="fa-solid fa-couch text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-serif text-brand-dark mb-2">
+              Furniture & Decor
+            </h4>
+            <p class="text-brand-gray font-light text-sm">
+              Curated selections that elevate the character of your space.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-brand-accent mb-4">
+              <i class="fa-solid fa-fire-burner text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-serif text-brand-dark mb-2">
+              Modular Kitchens
+            </h4>
+            <p class="text-brand-gray font-light text-sm">
+              Sleek, highly functional kitchens designed for modern living.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-brand-accent mb-4">
+              <i class="fa-solid fa-hammer text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-serif text-brand-dark mb-2">
+              Renovation & Makeovers
+            </h4>
+            <p class="text-brand-gray font-light text-sm">
+              Transforming outdated areas into vibrant, contemporary spaces.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 lg:col-span-2 xl:col-span-2"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-brand-accent mb-4">
+              <i class="fa-solid fa-vr-cardboard text-3xl"></i>
+            </div>
+            <h4 class="text-xl font-serif text-brand-dark mb-2">
+              3D Design & Visualization
+            </h4>
+            <p class="text-brand-gray font-light text-sm">
+              Experience your design in photorealistic 3D before execution
+              begins.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-brand-light">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+          <h2
+            class="text-sm tracking-widest uppercase text-brand-accent mb-3"
+            data-aos="fade-up"
+          >
+            Portfolio
+          </h2>
+          <h3
+            class="text-4xl md:text-5xl font-serif text-brand-dark mb-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            Featured Projects
+          </h3>
+          <p
+            class="text-brand-gray font-light text-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Explore our latest interior design projects that showcase
+            creativity, functionality, and modern aesthetics.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Marble%20TV%20Unit%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.31%20PM%20(1).jpeg"
+              alt="TV Unit Design"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Pink%20Modular%20Kitchen%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.31%20PM%20(2).jpeg"
+              alt="Modular Kitchen Design"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Grey%20Kitchen%20Interior%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.32%20PM%20(1).jpeg"
+              alt="Grey Kitchen Interior"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Living%20Room%20TV%20Panel%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.32%20PM%20(2).jpeg"
+              alt="Living Room TV Panel"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Modern%20Minimalist%20TV%20Wall%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.32%20PM.jpeg"
+              alt="Modern Minimalist TV Wall"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Contemporary%20Kitchen%20Setup%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.33%20PM%20(1).jpeg"
+              alt="Contemporary Kitchen Setup"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Wood%20Fluted%20Panel%20TV%20Unit%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.34%20PM%20(1).jpeg"
+              alt="Wood Fluted Panel TV Unit"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Compact%20Modular%20Kitchen%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.34%20PM.jpeg"
+              alt="Compact Modular Kitchen"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Purple%20Kitchen%20Design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.35%20PM%20(1).jpeg"
+              alt="Elegant Purple Kitchen Design"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Wood%20Paneling%20Living%20Space%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.35%20PM%20(2).jpeg"
+              alt="Cozy Living Space with Wood Paneling"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Modern%20Dual-Tone%20Kitchen%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.35%20PM.jpeg"
+              alt="Modern Dual-Tone Kitchen Layout"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Luxury%20Bedroom%20Interior%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.36%20PM%20(1).jpeg"
+              alt="Luxury Bedroom Interior"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi!%20I%20saw%20the%20Striped%20Bedroom%20design%20on%20your%20website%20and%20want%20to%20discuss%20it."
+            target="_blank"
+            class="group relative image-hover-zoom rounded-sm shadow-md cursor-pointer"
+            data-aos="fade-up"
+          >
+            <img
+              src="WhatsApp%20Image%202026-05-16%20at%2012.04.36%20PM.jpeg"
+              alt="Contemporary Striped Bedroom Design"
+              class="w-full h-80 object-cover"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+            >
+              <span
+                class="text-white font-serif text-xl border-b border-brand-accent pb-1"
+                ><i class="fab fa-whatsapp mr-2 text-green-400"></i>Discuss on
+                WhatsApp</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div class="mt-16 text-center" data-aos="fade-up">
+          <a
+            href="https://wa.me/YOUR_PHONE_NUMBER?text=I%20loved%20your%20portfolio%20and%20want%20to%20discuss%20a%20project."
+            target="_blank"
+            class="inline-flex items-center gap-2 border border-brand-dark text-brand-dark px-8 py-3 text-sm tracking-widest uppercase hover:bg-brand-dark hover:text-white transition-colors duration-300"
+          >
+            Discuss Your Vision on WhatsApp <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-brand-dark text-white pt-20 pb-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-gray-800 pb-12"
+        >
+          <div>
+            <h2 class="font-serif text-3xl font-semibold tracking-wide mb-6">
+              Urbancraft<span class="text-brand-accent">.</span>
+            </h2>
+            <p class="text-gray-400 font-light max-w-sm mb-6">
+              Turning visions into reality. We blend style, comfort, and
+              functionality to create timeless interior experiences.
+            </p>
+          </div>
+          <div>
+            <h4
+              class="text-sm tracking-widest uppercase text-brand-accent mb-6"
+            >
+              Quick Links
+            </h4>
+            <ul class="space-y-3 font-light text-gray-400">
+              <li>
+                <a href="#about" class="hover:text-white transition-colors"
+                  >About Studio</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-white transition-colors"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a href="#projects" class="hover:text-white transition-colors"
+                  >Project Portfolio</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4
+              class="text-sm tracking-widest uppercase text-brand-accent mb-6"
+            >
+              Connect
+            </h4>
+            <p class="text-gray-400 font-light mb-4">
+              Ready to start your journey with us?
+            </p>
+            <a
+              href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%20Urbancraft!"
+              target="_blank"
+              class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-sm hover:bg-green-700 transition-colors duration-300"
+            >
+              <i class="fab fa-whatsapp text-xl"></i> Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+        <div
+          class="pt-8 text-center text-gray-500 text-sm font-light flex flex-col md:flex-row justify-between items-center"
+        >
+          <p>&copy; 2026 Urbancraft Interior Studio. All rights reserved.</p>
+          <p class="mt-2 md:mt-0">Designed with perfection.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="https://wa.me/YOUR_PHONE_NUMBER?text=Hello%20Urbancraft!"
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:-translate-y-1 hover:shadow-green-500/30 transition-all duration-300 z-50 flex items-center justify-center"
+    >
+      <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        offset: 50,
+      });
+    </script>
+  </body>
+</html>
